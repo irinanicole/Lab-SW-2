@@ -1,0 +1,142 @@
+>> Mi petición <<
+
+actúa como experto programador web con conocimientos en html5, css, bootstrap, sigue los estándares de w3c, quiero que hagas el código html semántico y utilices clases de bootstrap 5, y realices un sitio html que tenga como título principal "TP2 - Ejercicio X", tenga un header centrado horizontalmente que diga "Nombre-Página-Web", tenga un body con un main dentro y a su vez un section con texto para completar y padding igual a 10%, y tambien tenga dentro del body un footer que diga "Copyright 2024 - Irina Nicole Bourdette", colocar colores pastel de fondo para diferenciar las partes de la página 
+
+
+<< Respuesta chatGPT >>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TP2 - Ejercicio X">
+    <title>TP1 - Ejercicio X</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: #FADADD; /* Rosa pastel */
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            background-color: #D1E7DD; /* Verde pastel */
+            padding: 10%;
+        }
+
+        footer {
+            background-color: #FFF3CD; /* Amarillo pastel */
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nombre-Página-Web</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Aquí puedes completar con el texto que desees para la sección principal de tu sitio web.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+Descripción:
+Estructura HTML5 Semántica: Uso de etiquetas header, main, section, y footer para organizar el contenido.
+Bootstrap 5: Incluye las clases y el framework para facilitar el diseño responsivo.
+Colores Pastel: Se han aplicado colores suaves (rosa, verde y amarillo pastel) para diferenciar visualmente las partes de la página.
+Centrado de Header y Footer: Tanto el título principal como el pie de página están centrados.
+
+
+>> El código que pegué y corregí <<
+
+
+> PARTE CSS <
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Copiado, pegado y corregido del ChatGPT IA */
+header {
+    background-color: #FADADD; /* Rosa pastel */
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    background-color: #D1E7DD; /* Verde pastel */
+}
+
+main section { /* corregido por mí */
+    padding: 10%;
+}
+
+footer {
+    background-color: #FFF3CD; /* Amarillo pastel */
+    padding: 10px;
+    text-align: center;
+}
+
+------------------------------------------------------------------------------
+
+> PARTE HTML <
+
+------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="es">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TP2 - Ejercicio X">
+    <title>TP1 - Ejercicio 1</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Nombre-Página-Web</h1>
+    </header>
+
+    <main>
+        <section>
+		<?php
+    			require_once("php/encabezado.php");
+    			echo ("<p>Este es el texto desde <strong>index.php</strong></p>");
+    			require_once("php/pie.php");
+		?>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Copiado, pegado y corregido del ChatGPT IA */
+header {
+    background-color: #FADADD; /* Rosa pastel */
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    background-color: #D1E7DD; /* Verde pastel */
+}
+
+main section {
+    padding: 5%;
+    font-size: large;
+}
+
+footer {
+    background-color: #FFF3CD; /* Amarillo pastel */
+    padding: 10px;
+    text-align: center;
+}
