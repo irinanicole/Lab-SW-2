@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <h1>Nombre-Pagina</h1>
+        <h1>Juego '9 y 1/2'</h1>
     </header>
 
     <main>
