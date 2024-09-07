@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP 1 - Ejercicio 3</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
 </head>
 <body>
-    <head>
+    <header>
         <h1>Cuenta Bancaria</h1>
-    </head>
+    </header>
+    <main class="flex flex-row justify-content-center">
+        <section class="col-6">
+
