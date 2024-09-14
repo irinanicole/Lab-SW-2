@@ -1,3 +1,5 @@
+<<<<< EJERCICIO 1 Y 2 >>>>>
+
 (INICIO)
 ---> ALUMNO <---
 
@@ -241,3 +243,393 @@ disminuir el footer de py-3 a py-2 y que su contenido que de centrado verticalme
 </html>
 
 (FIN)
+
+---------------------------------------------------------------------------------------------------
+<<<<< EJERCICIO 3 >>>>>
+
+(INICIO)
+---> ALUMNO <---
+
+actúa como experto programador web con conocimientos en html5, css y bootstrap, y siguiendo los estándares de w3c, quiero que hagas el código html semántico, utilizando clases de bootstrap v5.0 y siempre usando 'section' en vez de 'div', de un página que tenga como título principal "TP3 - Ejercicio 03", tenga un header centrado horizontalmente que diga "Tuqui 10", tenga un main que ocupe toda la pantalla y contenga dos section con un ancho de 10 columnas cada uno centrados de forma horizontal y vertical y que cuando el tamaño de la pantalla sea mayor a 1024px cambiar su ancho a uno de 5 columnas cada uno y alinearlos en una sola fila para dejarlos con un justify-content-around. Al primer section creado ponerle un título h2 que diga "Mi Cartón" el cual debe centrarse horizontalmente y debajo crear una tabla  de 5 filas y 2 columnas, centrada de forma horizontal y vertical. Al segundo section creado ponerle un título que diga "Sorteo" centrado horizontalmente, debajo del título crear una tabla de 2 filas y 5 columnas que debe estar centrada horizontalmente y debajo de la tabla un texto en negrita que diga "Aciertos". Finalmente, debajo del main añadir un footer que diga "Copyright 2024 - Irina Nicole Bourdette". Por último, utiliza colores pastel de fondo para diferenciar todas las partes de la página y teniendo en cuenta que tengo bootstrap en la memoria del equipo utiliza el directorio "../bootstrap-5.3.3-dist/css/bootstrap.min.css" para linkear el css al código de la página y el directorio "../bootstrap-5.3.3-dist/js/boostrap.min.js" para linkear el js.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3 - Ejercicio 03</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+        header, footer {
+            background-color: #f8d7da; /* Color pastel para el header y footer */
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            background-color: #d1ecf1; /* Color pastel para el main */
+            min-height: 100vh; /* Para que ocupe toda la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        section {
+            background-color: #e2e3e5; /* Color pastel para las sections */
+            padding: 20px;
+        }
+        table {
+            margin: auto;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tuqui 10</h1>
+    </header>
+
+    <main class="container d-flex justify-content-center align-items-center flex-column">
+        <section class="col-10 col-lg-5 mb-4 text-center">
+            <h2>Mi Cartón</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Fila 1, Col 1</td>
+                        <td>Fila 1, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2, Col 1</td>
+                        <td>Fila 2, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3, Col 1</td>
+                        <td>Fila 3, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 4, Col 1</td>
+                        <td>Fila 4, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 5, Col 1</td>
+                        <td>Fila 5, Col 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="col-10 col-lg-5 text-center">
+            <h2>Sorteo</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Fila 1, Col 1</td>
+                        <td>Fila 1, Col 2</td>
+                        <td>Fila 1, Col 3</td>
+                        <td>Fila 1, Col 4</td>
+                        <td>Fila 1, Col 5</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2, Col 1</td>
+                        <td>Fila 2, Col 2</td>
+                        <td>Fila 2, Col 3</td>
+                        <td>Fila 2, Col 4</td>
+                        <td>Fila 2, Col 5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="fw-bold">Aciertos</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(PRIMER CAMBIO)
+---> ALUMNO <---
+
+cambia el main para que ocupe todo el ancho, que cuando la pantalla tenga un tamaño igual a 1024px o más el main tenga sus dos section distribuidos en una sola fila con un justify-content-around. Además el contenido del footer centrado verticalmente.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3 - Ejercicio 03</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+        header, footer {
+            background-color: #f8d7da; /* Color pastel para el header y footer */
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            background-color: #d1ecf1; /* Color pastel para el main */
+            min-height: 100vh; /* Para que ocupe toda la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Para que ocupe todo el ancho */
+        }
+        @media (min-width: 1024px) {
+            main {
+                flex-direction: row;
+                justify-content: around;
+            }
+        }
+        section {
+            background-color: #e2e3e5; /* Color pastel para las sections */
+            padding: 20px;
+            width: 100%;
+            max-width: 100%; /* Para que se ajuste al tamaño de la pantalla */
+            margin-bottom: 20px;
+        }
+        @media (min-width: 1024px) {
+            section {
+                width: 45%; /* Reducir el ancho de cada section en pantallas grandes */
+            }
+        }
+        table {
+            margin: auto;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px; /* Altura fija para centrar verticalmente el contenido */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tuqui 10</h1>
+    </header>
+
+    <main class="container-fluid d-flex flex-column flex-md-row justify-content-center align-items-center">
+        <section class="col-10 col-lg-5 text-center">
+            <h2>Mi Cartón</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Fila 1, Col 1</td>
+                        <td>Fila 1, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2, Col 1</td>
+                        <td>Fila 2, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3, Col 1</td>
+                        <td>Fila 3, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 4, Col 1</td>
+                        <td>Fila 4, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 5, Col 1</td>
+                        <td>Fila 5, Col 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="col-10 col-lg-5 text-center">
+            <h2>Sorteo</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Fila 1, Col 1</td>
+                        <td>Fila 1, Col 2</td>
+                        <td>Fila 1, Col 3</td>
+                        <td>Fila 1, Col 4</td>
+                        <td>Fila 1, Col 5</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2, Col 1</td>
+                        <td>Fila 2, Col 2</td>
+                        <td>Fila 2, Col 3</td>
+                        <td>Fila 2, Col 4</td>
+                        <td>Fila 2, Col 5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="fw-bold">Aciertos</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(SEGUNDO CAMBIO)
+---> ALUMNO <---
+
+los dos section dentro del main deben tener la misma altura y ancho y el contenido justificado en el main debe ser space-evenly. Las dos tablas que hay en la página deben tener un margin a la izquierda y a la derecha del 10%.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3 - Ejercicio 03</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #f8d7da; /* Color pastel para el header y footer */
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            background-color: #d1ecf1; /* Color pastel para el main */
+            min-height: 100vh; /* Para que ocupe toda la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly; /* Distribución con espacio equitativo */
+            align-items: center;
+            width: 100%; /* Para que ocupe todo el ancho */
+        }
+        @media (min-width: 1024px) {
+            main {
+                flex-direction: row;
+            }
+        }
+        section {
+            background-color: #e2e3e5; /* Color pastel para las sections */
+            padding: 20px;
+            width: 100%;
+            max-width: 45%; /* Para que las secciones tengan el mismo ancho */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Para alinear el contenido verticalmente */
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 1024px) {
+            section {
+                height: 400px; /* Para que tengan la misma altura en pantallas grandes */
+            }
+        }
+        table {
+            margin-left: 10%; /* Margen a la izquierda y derecha del 10% */
+            margin-right: 10%;
+            width: 80%; /* Ajuste del ancho para la tabla */
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px; /* Altura fija para centrar verticalmente el contenido */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tuqui 10</h1>
+    </header>
+
+    <main class="container-fluid">
+        <section>
+            <h2>Mi Cartón</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Fila 1, Col 1</td>
+                        <td>Fila 1, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2, Col 1</td>
+                        <td>Fila 2, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3, Col 1</td>
+                        <td>Fila 3, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 4, Col 1</td>
+                        <td>Fila 4, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 5, Col 1</td>
+                        <td>Fila 5, Col 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Sorteo</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Fila 1, Col 1</td>
+                        <td>Fila 1, Col 2</td>
+                        <td>Fila 1, Col 3</td>
+                        <td>Fila 1, Col 4</td>
+                        <td>Fila 1, Col 5</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2, Col 1</td>
+                        <td>Fila 2, Col 2</td>
+                        <td>Fila 2, Col 3</td>
+                        <td>Fila 2, Col 4</td>
+                        <td>Fila 2, Col 5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="fw-bold">Aciertos</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(FIN)
+
+---------------------------------------------------------------------------------------------------
+>>>>> EJERCICIO 4 <<<<<
+
+(INICIO)
+----> ALUMNO <---
+
