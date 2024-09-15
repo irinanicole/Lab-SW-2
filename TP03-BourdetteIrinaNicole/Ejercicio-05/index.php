@@ -1,0 +1,67 @@
+<?php
+    require_once 'php/encabezado.php';
+?>
+
+<?php
+
+    $caracteres = array ('-' => 'guion', 'B' => 'b_larga');
+    $contBombas = 0;
+    $espacios = 8;
+
+    for ($i=0; $i < 10; $i++) { 
+        for ($j=0; $j < 10; $j++) { 
+            $carac_alea = array_rand ($caracteres);
+            if ($carac_alea == 'B') {
+                if ($contBombas < 10 && $espacios >= 8) {
+                    $matriz[$i][$j] = 'B';
+                    $contBombas++;
+                    $espacios = 0;
+                } else {
+                    $matriz[$i][$j] = '-';
+                    $espacios++;
+                }
+            } else {
+                $matriz[$i][$j] = '-';
+                $espacios++;
+            }
+        }
+    }
+
+    // print_r($matriz);
+?>
+        <table>
+            <!-- Generar una tabla 10x10 -->
+            <tbody>
+                <!-- Crear filas de la tabla -->
+                <!-- Puedes generar las celdas automáticamente con un bucle si usas un lenguaje de servidor o JavaScript -->
+                <!-- Aquí está el ejemplo estático -->
+                <?php
+                    for ($i = 0; $i <10; $i++) {
+                        echo '<tr>';
+                        for ($j = 0; $j <10; $j++) {
+                            if ($matriz[$i][$j] == 'B') {
+                                echo '<td>
+                                            <figure class="figure text-center">
+                                                <img src="img/mina.jpg" alt="bomba" class="figure-img ">
+                                            </figure>
+                                    </td>';
+                            } else {
+                                echo '<td>
+                                            <figure class="figure text-center">
+                                                <img src="img/vacio.jpg" alt="vacio" class="figure-img">
+                                            </figure>
+                                    </td>';
+                            }
+                        }
+                        echo '</tr>';
+                    }
+                ?>
+            </tbody>
+        </table>
+        <section>
+            <p>Puntos: XX</p>
+        </section>
+
+<?php
+    require_once 'php/pie.php';
+?>
