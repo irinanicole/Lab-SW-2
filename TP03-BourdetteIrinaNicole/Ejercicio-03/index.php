@@ -1,130 +1,103 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP3 - Ejercicio 03</title>
-    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #f8d7da; /* Color pastel para el header y footer */
-            text-align: center;
-            padding: 10px;
-        }
-        main {
-            background-color: #d1ecf1; /* Color pastel para el main */
-            min-height: 100vh; /* Para que ocupe toda la pantalla */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly; /* Distribución con espacio equitativo */
-            align-items: center;
-            width: 100%; /* Para que ocupe todo el ancho */
-        }
-        @media (min-width: 1024px) {
-            main {
-                flex-direction: row;
-            }
-        }
-        section {
-            background-color: #e2e3e5; /* Color pastel para las sections */
-            padding: 20px;
-            width: 100%;
-            max-width: 45%; /* Para que las secciones tengan el mismo ancho */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Para alinear el contenido verticalmente */
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        @media (min-width: 1024px) {
-            section {
-                height: 400px; /* Para que tengan la misma altura en pantallas grandes */
-            }
-        }
-        table {
-            margin-left: 10%; /* Margen a la izquierda y derecha del 10% */
-            margin-right: 10%;
-            width: 80%; /* Ajuste del ancho para la tabla */
-        }
-        h2 {
-            margin-bottom: 20px;
-        }
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px; /* Altura fija para centrar verticalmente el contenido */
-        }
-    </style>
-</head>
-<body>
+<?php
+    require_once 'php/encabezado.php'; // linkeo el código del encabezado de la pagina con el 'index.php'
+?>
 
-    <header>
-        <h1>Tuqui 10</h1>
-    </header>
+<!-- CONTENIDO DE LA TABLA A CONTINUACION -->
 
-    <main class="container-fluid">
+<?php // ----> ARMO MI ARREGLO PARA COMPLETAR EL CARTON CON EL QUE JUGARÉ EN CÓDIGO PHP <----
+    $miCarton = ['01','05','06','07','09','10','13','15','19','20'];
+?>
+<!-- A CONTINUACION LA TABLA EN HTML -->
         <section>
             <h2>Mi Cartón</h2>
-            <table class="table table-bordered">
+            <table class="table table-bordered table-warning text-center" style="width: 30%;">
                 <tbody>
-                    <tr>
-                        <td>Fila 1, Col 1</td>
-                        <td>Fila 1, Col 2</td>
-                    </tr>
-                    <tr>
-                        <td>Fila 2, Col 1</td>
-                        <td>Fila 2, Col 2</td>
-                    </tr>
-                    <tr>
-                        <td>Fila 3, Col 1</td>
-                        <td>Fila 3, Col 2</td>
-                    </tr>
-                    <tr>
-                        <td>Fila 4, Col 1</td>
-                        <td>Fila 4, Col 2</td>
-                    </tr>
-                    <tr>
-                        <td>Fila 5, Col 1</td>
-                        <td>Fila 5, Col 2</td>
-                    </tr>
+                    <?php // procedo a mostrar en una tabla todos los numeros de mi cartón
+                        for ($i=0; $i<10; $i++) {
+                            if ($i==0) {                            // si es fila 1 columna 1
+                                echo '<tr><td><strong>'.$miCarton[$i].'</strong></td>';// crea una fila y una columna (por única vez)
+                            } else if ($i%2!==0) {                  // si es fila 2
+                                echo '<td><strong>'.$miCarton[$i].'</strong></td></tr>';// crea una nueva columna y cierra fila
+                            } else {                                // si es fila 1
+                                echo '<tr><td><strong>'.$miCarton[$i].'</strong></td>'; // crea una nueva fila y una nueva columna
+                            }
+                        }
+                    ?>
                 </tbody>
             </table>
         </section>
 
+<!-- EL SIGUIENTE PASO SERÁ MOSTRAR LOS RESULTADOS (creados aleatoriamente) QUE PUDIERON SALIR DESDE EL NRO 1 AL 22 (rango) -->
         <section>
             <h2>Sorteo</h2>
-            <table class="table table-bordered">
+            <table class="table table-bordered table-info text-center" style="width: 80%;">
                 <tbody>
-                    <tr>
-                        <td>Fila 1, Col 1</td>
-                        <td>Fila 1, Col 2</td>
-                        <td>Fila 1, Col 3</td>
-                        <td>Fila 1, Col 4</td>
-                        <td>Fila 1, Col 5</td>
-                    </tr>
-                    <tr>
-                        <td>Fila 2, Col 1</td>
-                        <td>Fila 2, Col 2</td>
-                        <td>Fila 2, Col 3</td>
-                        <td>Fila 2, Col 4</td>
-                        <td>Fila 2, Col 5</td>
-                    </tr>
+                    <?php
+                        $min=1; $max=22;
+                        for ($j=0; $j<10; $j++) { //genero los resultados aleatorios y los voy guardando en un array
+                            $num = mt_rand($min,$max);
+                            if ($j==0) { // el primer valor se guarda directamente en el primer lugar del arreglo
+                                if ($num < 10) { // si es un numero menor que 10, le agrego un 0 delante para que que el arreglo tengo todos sus valores de 2 CIFRAS
+                                    $cero = "0";
+                                    $resultados[0] = $cero . $num;
+                                } else {
+                                    $resultados[0] = $num;
+                                }
+                            } else if (!array_search($num,$resultados)) { // me aseguro de que no se vaya a repetir un valor dentro del array y ejecuto lo mismo pasos que en la condición anterior para tener numeros de 2 cifras 
+                                if ($num < 10) {
+                                    $cero = "0";
+                                    $resultados[$j] = $cero . $num;
+                                } else {
+                                    $resultados[$j] = $num;
+                                }
+                            } else { // me aseguro de que se ocupen 10 lugares en el arreglo y sin espacios vacíos de por medio.
+                                $j--;
+                            }
+                        }
+                    ?>
+                    <!-- ¡AHORA DEBO COMPROBAR SI MI CARTÓN ES EL CARTÓN GANADOR! -->
+                    <?php
+                        $asiertos = 0;
+                        for ($k=0; $k<10; $k++) {
+                            $num = $miCarton[$k]; // agarro un valor de mi carton y lo comparo con cada uno de los valores del arreglo $resultados hasta terminar el carton
+                            foreach ($resultados as $valor) {
+                                if ($num == $valor) {
+                                    $asiertos++; // voy sumando la cantidad de asiertos
+                                }
+                            }
+                        }
+                    ?>
+                    <!-- ORDENO LOS NUMEROS DE MANERA ASCENDENTE Y LOS MUESTRO POR PANTALLA -->
+                    <?php
+                        //print_r($resultados);
+                        //echo '<hr>';
+                        sort($resultados); // solo los elementos del arreglo cambian su orden... los índices quedan como están
+                        //print_r($resultados);
+                        for ($j=0; $j<10; $j++) {
+                            if ($j==0 || $j==5) {                            // si es el comienzo de una fila
+                                echo '<tr><td><strong>'.$resultados[$j].'</strong></td>';// crea una fila y la primera columna de esa fila
+                            } else if ($j==4 || $j==9) {                  // si es el final de una fila
+                                echo '<td><strong>'.$resultados[$j].'</strong></td></tr>';// crea la ultima columna y cierra esa fila
+                            } else {                                // si no comienza ni termina una fila, es decir, se encuentra entre la 2da y 4ta columna
+                                echo '<td><strong>'.$resultados[$j].'</strong></td>'; // escribe una columna por cada numero
+                            }
+                        }
+                    ?>
                 </tbody>
             </table>
-            <p><strong>Aciertos</strong></p>
+            <!-- MUESTR LA CANTIDAD DE ASIERTOS -->
+            <?php
+                if ($asiertos == 10) {
+                    echo '<p>¡¡¡<strong>WOW, HAS GANADO EL POZO DE $35.000.000!!!</strong></p>';
+                    ECHO '<p><strong>¡¡¡¡MUCHAS FELICIDADES!!!!</strong></p>';
+                } else {
+                    echo '<p><strong>Aciertos: '.$asiertos.'</strong></p>';
+                }
+            ?>
         </section>
-    </main>
 
-    <footer>
-        <p>Copyright 2024 - Irina Nicole Bourdette</p>
-    </footer>
+<!-- TERMINO EL CÓDIGO DE LA TABLA EN HTML -->
 
-    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+    require_once 'php/pie.php';
+?>
