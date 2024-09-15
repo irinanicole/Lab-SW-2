@@ -1,0 +1,55 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header {
+    width: 100%;
+    height: auto;
+    background-color: midnightblue;
+}
+aside, main {
+    padding: 1em;
+}
+aside {
+    background-color: lightpink;
+}
+main {
+    background-color: lightblue;
+}
+aside figure {
+    padding: 1.5em;
+}
+aside figure figcaption {
+    font-weight: bold;
+}
+main section {
+    width: 90%;
+    margin-bottom: 2em;
+    padding: 2em;
+    background-color: lightblue;
+    text-align: center;
+}
+table {
+    width: 75%;
+    margin: 0 auto;
+}
+table th:nth-child(2) {
+    width: 1%;
+    white-space: nowrap;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 6vh;
+    background-color: lightslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
