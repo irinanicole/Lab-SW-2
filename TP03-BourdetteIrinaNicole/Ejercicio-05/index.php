@@ -29,7 +29,7 @@
 
     // print_r($matriz);
 ?>
-        <table>
+        <table class="table table-responsive table-secondary table-borderless align-middle w-25 h-100">
             <!-- Generar una tabla 10x10 -->
             <tbody>
                 <!-- Crear filas de la tabla -->
@@ -40,16 +40,16 @@
                         echo '<tr>';
                         for ($j = 0; $j <10; $j++) {
                             if ($matriz[$i][$j] == 'B') {
-                                echo '<td>
-                                            <figure class="figure text-center">
-                                                <img src="img/mina.jpg" alt="bomba" class="figure-img ">
-                                            </figure>
+                                echo '<td class="p-0">
+                                            
+                                                <img src="img/mina.jpg" alt="bomba" class="img-fluid w-100 h-100">
+                                            
                                     </td>';
                             } else {
-                                echo '<td>
-                                            <figure class="figure text-center">
-                                                <img src="img/vacio.jpg" alt="vacio" class="figure-img">
-                                            </figure>
+                                echo '<td class="p-0">
+                                            
+                                                <img src="img/vacio.jpg" alt="vacio" class="img-fluid w-100 h-100">
+                                            
                                     </td>';
                             }
                         }
@@ -58,8 +58,24 @@
                 ?>
             </tbody>
         </table>
-        <section>
-            <p>Puntos: XX</p>
+        <section class="bg bg-success p-3">
+            <?php
+                $min = 1; $max = 10;
+                $sigueJugando = true;
+                $puntos = 0;
+                do {
+                    $num1 = mt_rand ($min,$max);
+                    $num2 = mt_rand ($min,$max);
+                    if ($matriz[($num1-1)][($num2-1)] == 'B') {
+                        $sigueJugando = false;
+                    } else {
+                        $puntos++;
+                    }
+                } while ($sigueJugando == true);
+
+                echo '<p><strong>Bomba hallada en la casilla: ['.$num1.']['.$num2.']</strong></p>';
+                echo '<p><strong>Puntos Obtenidos: '.$puntos.'</strong></p>';
+            ?>     
         </section>
 
 <?php
