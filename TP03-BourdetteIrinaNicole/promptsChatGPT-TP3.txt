@@ -1195,7 +1195,7 @@ añade tambien todas las clases de bootstrap faltantes y necesarias para que la p
 (INICIO)
 ---> ALUMNO <---
 
-actúa como experto programador web con conocimientos en html5, css, bootstrap v5.0 y siguiendo los estándares de w3c, quiero que hagas un código html semántico, utilizando clases de bootstrap v5.0 y solo usando 'section' en vez de 'div' en todo el código, que tenga como título principal "TP03 - Ejercicio 04", tenga un header cuyo contenido esté centrado horizonalmente y diga "Buscaminas". El body ocupará todo el ancho de la pantalla con su contenido organizado en el centro horizontal y verticalmente y contendrá un main que tendrá un ancho de 8 columnas cuyo contenido se encontrará centrado vertical y horizontalmente. Dentro del main, crear 2 section, el primero con un altura y ancho iguales para que parezca un cuadrado perfecto y el segundo con el mismo ancho que el section anterior y una altura igual a 10vh. Ambos section deberán tener su contenido centrado vertical y horizontalmente y el margin y padding deben ser de 2em. Dentro del primer section crear un tabla de 10x10 cuadrada que ocupará el 80% del ancho de su contenedor padre, y donde las celdas de esa tabla sean todas cuadradas con un padding igual a 0.5em cada una. Cada celda debe rellenarse con una imagen. El segundo section que contenga un texto en <strong> que diga "Puntos: XX" . Finalmente, añadir un footer al final de la página que este fijo con una altura de 6vh y que su contenido esté centrado vertical y horizontalmente. El debe decir "Copyright 2024 - Irina Nicole Bourdette". Utiliza colores de fondo para diferenciar todas las partes de la página y teniendo en cuenta que tengo bootstrap en la memoria del equipo utiliza el directorio "../bootstrap-5.3.3-dist/css/bootstrap.min.css" para linkear el css al código de la página y el directorio "../bootstrap-5.3.3-dist/js/boostrap.min.js" para linkear el js.
+actúa como experto programador web con conocimientos en html5, css y bootstrap v5.0, y siguiendo los estándares de w3c, quiero que hagas un código html semántico, utilizando siempre 'section' por 'div', que sea responsive, tenga como título principal "TP03 - Ejercicio 05", tenga un body que ocupe toda la pantalla, tenga un header que ocupe todo el ancho de la pantalla y diga "Buscaminas", debajo tenga una main que contenga una tabla de 10x10 cuadrada y las celdas tengan un border-collapse: separate y un border-spacing: 2px. Debajo de la tabla añadir un section con un ancho del 50% y tenga un texto dentro que diga "Puntos: XX". Al final de la página, debe haber un footer que diga "Copyright 2024 - Irina Nicole Bourdette". El contenido dentro del header, del section y del footer debe estar ubicado en el centro de forma vertical y horizontal. El contenido dentro del main debe estar organizado en una sola columna y estar todo alineado al centro. Teniendo en cuenta que tengo el bootstrap en la memoria del equipo utilizar el directorio "../bootstrap-5.3.3-dist/css/bootstrap.min.css" para linkear el css de bootstrap y el directorio "../bootstrap-5.3.3-dist/js/bootstrap.min.js" para linkear el js de bootstrap con el código de la página web. Utilizar colores de fondo llamativos para diferenciar las partes de la página.
 
 ---> CHAT-GPT <---
 
@@ -1204,116 +1204,76 @@ actúa como experto programador web con conocimientos en html5, css, bootstrap v5
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TP03 - Ejercicio 04</title>
+    <title>TP03 - Ejercicio 05</title>
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <style>
-        body, html {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-
-        header {
-            background-color: #f8f9fa;
-            text-align: center;
-            padding: 1em;
-        }
-
-        main {
-            background-color: #e9ecef;
+        body {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2em;
-            width: 100%;
+            margin: 0;
         }
-
-        section {
-            background-color: #6c757d;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2em;
-            padding: 2em;
-            text-align: center;
-        }
-
-        #minesweeper-board {
-            width: 80%;
-            padding: 2em;
-        }
-
-        table {
-            width: 100%;
-            height: 100%;
-            table-layout: fixed;
-            border-collapse: collapse;
-        }
-
-        td {
-            width: 10%;
-            padding: 0.5em;
-        }
-
-        td img {
-            width: 100%;
-            height: auto;
-        }
-
-        #score-section {
-            height: 10vh;
-        }
-
-        footer {
-            background-color: #343a40;
+        header, footer {
+            background-color: #007bff; /* Color llamativo para header y footer */
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 6vh;
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #28a745; /* Color llamativo para el main */
+            padding: 20px;
+        }
+        section {
+            width: 50%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        th, td {
+            width: 40px;
+            height: 40px;
+            background-color: #ffc107; /* Color llamativo para las celdas de la tabla */
+            border: 1px solid #212529;
+        }
+        footer {
+            height: 8vh;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Buscaminas</h1>
     </header>
 
-    <main class="col-8">
-        <section id="minesweeper-section" style="width: 80vh; height: 80vh;">
-            <table id="minesweeper-board" class="table table-bordered">
-                <tbody>
-                    <!-- Creamos una tabla de 10x10 -->
-                    <!-- Usa la ruta de tus imágenes para cada celda (puede ser una imagen de mina o una vacía) -->
+    <main>
+        <table>
+            <!-- Generar una tabla 10x10 -->
+            <tbody>
+                <!-- Crear filas de la tabla -->
+                <!-- Puedes generar las celdas automáticamente con un bucle si usas un lenguaje de servidor o JavaScript -->
+                <!-- Aquí está el ejemplo estático -->
+                <?php for ($i = 0; $i < 10; $i++): ?>
                     <tr>
-                        <td><img src="img1.jpg" alt="img1"></td>
-                        <td><img src="img2.jpg" alt="img2"></td>
-                        <td><img src="img3.jpg" alt="img3"></td>
-                        <td><img src="img4.jpg" alt="img4"></td>
-                        <td><img src="img5.jpg" alt="img5"></td>
-                        <td><img src="img6.jpg" alt="img6"></td>
-                        <td><img src="img7.jpg" alt="img7"></td>
-                        <td><img src="img8.jpg" alt="img8"></td>
-                        <td><img src="img9.jpg" alt="img9"></td>
-                        <td><img src="img10.jpg" alt="img10"></td>
+                        <?php for ($j = 0; $j < 10; $j++): ?>
+                            <td></td>
+                        <?php endfor; ?>
                     </tr>
-                    <!-- Repetir la fila 9 veces más para tener la tabla completa de 10x10 -->
-                    <!-- Rellenar cada celda con las imágenes correspondientes -->
-                    <!-- Esta parte es repetitiva para las siguientes filas -->
-                </tbody>
-            </table>
-        </section>
-
-        <section id="score-section" style="width: 80vh;">
-            <strong>Puntos: XX</strong>
+                <?php endfor; ?>
+            </tbody>
+        </table>
+        <section>
+            <p>Puntos: XX</p>
         </section>
     </main>
 
@@ -1328,135 +1288,88 @@ actúa como experto programador web con conocimientos en html5, css, bootstrap v5
 (PRIMER CAMBIO)
 ---> ALUMNO <---
 
-acomoda el header para que quede al inicio de la página y ocupe todo el ancho de la pantalla. Centra verticalmente el contenido del footer. Utiliza los colores llamativos de bootstrap5 para diferenciar las partes de la página. El body debe ocupar toda la pantalla, el main debe estar en el medio del body y el contenido del main debe estar organizado en columnas y alineado verticalmente en el centro. 
+agrega o quita de la tabla con clases de bootstrap 5 para que las imágenes que se encuentran dentro de cada celda, queden centradas y ampliadas para que ocupen por completo cada celda y luego que la tabla quede cuadrada en el siguiente código html :
+<table class="table table-responsive table-secondary table-borderless align-middle">
+            <!-- Generar una tabla 10x10 -->
+            <tbody>
+                <!-- Crear filas de la tabla -->
+                <!-- Puedes generar las celdas automáticamente con un bucle si usas un lenguaje de servidor o JavaScript -->
+                <!-- Aquí está el ejemplo estático -->
+                <?php
+                    for ($i = 0; $i <10; $i++) {
+                        echo '<tr>';
+                        for ($j = 0; $j <10; $j++) {
+                            if ($matriz[$i][$j] == 'B') {
+                                echo '<td>
+                                            <figure class="figure">
+                                                <img src="img/mina.jpg" alt="bomba" class="figure-img img-fluid">
+                                            </figure>
+                                    </td>';
+                            } else {
+                                echo '<td>
+                                            <figure class="figure">
+                                                <img src="img/vacio.jpg" alt="vacio" class="figure-img img-fluid">
+                                            </figure>
+                                    </td>';
+                            }
+                        }
+                        echo '</tr>';
+                    }
+                ?>
+            </tbody>
+        </table> 
+                <!-- Crear filas de la tabla -->
+                <!-- Puedes generar las celdas automáticamente con un bucle si usas un lenguaje de servidor o JavaScript -->
+                <!-- Aquí está el ejemplo estático -->
+                <?php
+                    for ($i = 0; $i <10; $i++) {
+                        echo '<tr>';
+                        for ($j = 0; $j <10; $j++) {
+                            if ($matriz[$i][$j] == 'B') {
+                                echo '<td>
+                                            <figure class="figure">
+                                                <img src="img/mina.jpg" alt="bomba" class="figure-img img-fluid">
+                                            </figure>
+                                    </td>';
+                            } else {
+                                echo '<td>
+                                            <figure class="figure">
+                                                <img src="img/vacio.jpg" alt="vacio" class="figure-img img-fluid">
+                                            </figure>
+                                    </td>';
+                            }
+                        }
+                        echo '</tr>';
+                    }
+                ?>
+         </tbody>
+    </table>
 
 ---> CHAT-GPT <---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TP03 - Ejercicio 04</title>
-    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-
-        header {
-            background-color: #0d6efd; /* Color primario de Bootstrap */
-            color: white;
-            text-align: center;
-            padding: 1em;
-            width: 100%;
-        }
-
-        main {
-            background-color: #e9ecef; /* Color de fondo claro de Bootstrap */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2em;
-            width: 100%;
-            height: calc(100vh - 6vh - 4em); /* Altura total menos el footer y el padding del header */
-        }
-
-        section {
-            background-color: #198754; /* Color secundario de Bootstrap */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2em;
-            padding: 2em;
-            text-align: center;
-        }
-
-        #minesweeper-board {
-            width: 80%;
-            padding: 2em;
-        }
-
-        table {
-            width: 100%;
-            height: 100%;
-            table-layout: fixed;
-            border-collapse: collapse;
-        }
-
-        td {
-            width: 10%;
-            padding: 0.5em;
-        }
-
-        td img {
-            width: 100%;
-            height: auto;
-        }
-
-        #score-section {
-            height: 10vh;
-        }
-
-        footer {
-            background-color: #212529; /* Color oscuro de Bootstrap */
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 6vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Buscaminas</h1>
-    </header>
-
-    <main class="d-flex justify-content-center align-items-center">
-        <section id="minesweeper-section" style="width: 80vh; height: 80vh;">
-            <table id="minesweeper-board" class="table table-bordered">
-                <tbody>
-                    <!-- Creamos una tabla de 10x10 -->
-                    <!-- Usa la ruta de tus imágenes para cada celda (puede ser una imagen de mina o una vacía) -->
-                    <tr>
-                        <td><img src="img1.jpg" alt="img1"></td>
-                        <td><img src="img2.jpg" alt="img2"></td>
-                        <td><img src="img3.jpg" alt="img3"></td>
-                        <td><img src="img4.jpg" alt="img4"></td>
-                        <td><img src="img5.jpg" alt="img5"></td>
-                        <td><img src="img6.jpg" alt="img6"></td>
-                        <td><img src="img7.jpg" alt="img7"></td>
-                        <td><img src="img8.jpg" alt="img8"></td>
-                        <td><img src="img9.jpg" alt="img9"></td>
-                        <td><img src="img10.jpg" alt="img10"></td>
-                    </tr>
-                    <!-- Repetir la fila 9 veces más para tener la tabla completa de 10x10 -->
-                    <!-- Rellenar cada celda con las imágenes correspondientes -->
-                    <!-- Esta parte es repetitiva para las siguientes filas -->
-                </tbody>
-            </table>
-        </section>
-
-        <section id="score-section" style="width: 80vh;">
-            <strong>Puntos: XX</strong>
-        </section>
-    </main>
-
-    <footer>
-        <p>Copyright 2024 - Irina Nicole Bourdette</p>
-    </footer>
-
-    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+<table class="table table-responsive table-secondary table-borderless align-middle w-100 h-100">
+    <!-- Generar una tabla 10x10 -->
+    <tbody>
+        <!-- Crear filas de la tabla -->
+        <?php
+            for ($i = 0; $i < 10; $i++) {
+                echo '<tr>';
+                for ($j = 0; $j < 10; $j++) {
+                    if ($matriz[$i][$j] == 'B') {
+                        echo '<td class="p-0">
+                                <img src="img/mina.jpg" alt="bomba" class="img-fluid w-100 h-100">
+                              </td>';
+                    } else {
+                        echo '<td class="p-0">
+                                <img src="img/vacio.jpg" alt="vacio" class="img-fluid w-100 h-100">
+                              </td>';
+                    }
+                }
+                echo '</tr>';
+            }
+        ?>
+    </tbody>
+</table>
 
 (FIN)
 ---------------------------------------------------------------------------------------------------
