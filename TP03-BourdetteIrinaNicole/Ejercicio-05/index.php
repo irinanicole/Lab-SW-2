@@ -41,15 +41,11 @@
                         for ($j = 0; $j <10; $j++) {
                             if ($matriz[$i][$j] == 'B') {
                                 echo '<td class="p-0">
-                                            
-                                                <img src="img/mina.jpg" alt="bomba" class="img-fluid w-100 h-100">
-                                            
+                                            <img src="img/mina.jpg" alt="bomba" class="img-fluid w-100 h-100">
                                     </td>';
                             } else {
                                 echo '<td class="p-0">
-                                            
-                                                <img src="img/vacio.jpg" alt="vacio" class="img-fluid w-100 h-100">
-                                            
+                                            <img src="img/vacio.jpg" alt="espacio vacío" class="img-fluid w-100 h-100">
                                     </td>';
                             }
                         }

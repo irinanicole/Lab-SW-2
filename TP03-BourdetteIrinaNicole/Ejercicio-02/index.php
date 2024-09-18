@@ -18,11 +18,11 @@
     }
     // print_r ($contraseña); --> SOLO LO UTILICÉ PARA VERIFICAR QUE EL ARREGLO SE HABÍA GUARDADO BIEN
 
-    echo '<p>La nueva contraseña es: ';
+    echo '<p>La nueva contraseña es: <strong>';
     for ($j=0; $j < $cantCarac; $j++) {
         echo $contraseña[$j];
     }
-    echo '</p>';
+    echo '</strong></p>';
 
 
     require_once 'php/pie.php';

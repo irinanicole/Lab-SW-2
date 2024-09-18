@@ -10,7 +10,9 @@
 <body>
 
     <header>
-        <h1>Tuqui 10</h1>
+        <figure class="figure w-25 h-25"> <!-- Agregado de ultimo momento porque no había visto que había un archivo .jpg para este punto -->
+            <img class="figure-img img-fluid w-100 h-100" src="img/tuqui_logo.jpg" alt="Logo Tuqui 10">
+        </figure>
     </header>
 
     <main class="container-fluid">
