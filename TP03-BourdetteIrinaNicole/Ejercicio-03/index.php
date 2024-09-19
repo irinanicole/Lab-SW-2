@@ -37,21 +37,17 @@
                         for ($j=0; $j<10; $j++) { //genero los resultados aleatorios y los voy guardando en un array
                             $num = mt_rand($min,$max);
                             if ($j==0) { // el primer valor se guarda directamente en el primer lugar del arreglo
-                                if ($num < 10) { // si es un numero menor que 10, le agrego un 0 delante para que que el arreglo tengo todos sus valores de 2 CIFRAS
-                                    $cero = "0";
-                                    $resultados[0] = $cero . $num;
-                                } else {
-                                    $resultados[0] = $num;
-                                }
-                            } else if (!array_search($num,$resultados)) { // me aseguro de que no se vaya a repetir un valor dentro del array y ejecuto lo mismo pasos que en la condición anterior para tener numeros de 2 cifras 
-                                if ($num < 10) {
-                                    $cero = "0";
-                                    $resultados[$j] = $cero . $num;
-                                } else {
-                                    $resultados[$j] = $num;
-                                }
+                                $resultados[0] = $num;
+                            } else if (!in_array($num,$resultados)) { // me aseguro de que no se vaya a repetir un valor dentro del array y ejecuto lo mismo pasos que en la condición anterior para tener numeros de 2 cifras 
+                                $resultados[$j] = $num;
                             } else { // me aseguro de que se ocupen 10 lugares en el arreglo y sin espacios vacíos de por medio.
                                 $j--;
+                            }
+                        }
+                        // Le agrego un cero delante para los numeros menores a 10
+                        foreach ($resultados as $index => $valor) {
+                            if ($valor < 10) {
+                                $resultados [$index] = "0" . $valor;
                             }
                         }
                     ?>
