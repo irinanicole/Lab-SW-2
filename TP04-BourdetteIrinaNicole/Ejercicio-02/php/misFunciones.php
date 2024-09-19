@@ -42,7 +42,6 @@
 
     function prVerEstadisticas ($nroComi, $prom, $cantAp, $cantDes) {
         
-        echo '<p><strong>Estadísticas Comisión '.$nroComi.':</strong></p>';
         echo '<p>a. Promedio: '.$prom.'<br>b. Cantidad de Aprobados: '.$cantAp.'<br>c. Cantidad de Desaprobados: '.$cantDes.'</p>';
 
     }

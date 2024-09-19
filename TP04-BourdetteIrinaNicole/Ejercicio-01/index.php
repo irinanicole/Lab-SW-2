@@ -1,39 +1,94 @@
-<?php
-    require_once 'php/misFunciones.php';
-    // NOtas de cada comision:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
 
-$comisiones = [   
-                                                1 => array (
-                                                                                    $contJuego1,
-                                                                                    $pagoJuego1
-                                                                                    ),
-                                                2 => array (
-                                                                    $contJuego2,
-                                                                    $pagoJuego2
-                                                                    ),
-                                                3 => array (
-                                                                            $contJuego3,
-                                                                            $pagoJuego3
-                                                                            )
-                                            ];
- var_dump ($comisiones);
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
 
-    // $comisiones =
-    // [
-    //     [1] => array (2,3,5,4,7,3,5,10,3,6,8),
-    //     [2] => array (4,3,1,10,4,7,4,5,10,5,10,4,6,6,8),
-    //     [3] => array (5,7,9,3,8,5,2,7,10,1)
-    // ];
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
 
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
 
-    foreach ($comisiones as $nroComision => list($nota)) {
-        $promedio = fnCalcularPromedio ($nroComision);
-        $cantAprobados = fnCantidadAprobados ($nroComision);
-        $cantDesaprobados = fnCantidadDesaprobados ($nroComision);
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
 
-        prVerEstadisticas (($nroComision+1), $promedio, $cantAprobados, $cantDesaprobados);
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-    }
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
 
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-?>
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
