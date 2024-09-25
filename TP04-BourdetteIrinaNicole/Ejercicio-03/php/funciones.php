@@ -1,18 +1,18 @@
 <?php
+    define('PRECIO_HORA', 4000);
 
     function pagoDiario ($h, $d, $t) {
-        define('PRECIO_HORA', 4000);
         $aumentoNoche = 1.28;
         $acumulativoSabado = 1.12;
         $acumulativoDomingo = 1.26;
         $montoDia = PRECIO_HORA * $h;
 
-        if ($t == 'noche') {
+        if ($t == 'Noche') {
             $montoDia = $montoDia * $aumentoNoche;
         }
-        if ($d == 'sabado') {
+        if ($d == 'Sábado') {
             $montoDia = $montoDia * $acumulativoSabado;
-        } elseif ($d == 'domingo') {
+        } elseif ($d == 'Domingo') {
             $montoDia = $montoDia * $acumulativoDomingo;
         }
         
