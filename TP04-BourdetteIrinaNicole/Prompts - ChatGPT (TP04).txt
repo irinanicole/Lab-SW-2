@@ -399,3 +399,268 @@ agrega un color de fondo pastel al body que no se haya usado hasta ahora en todo
 
 (INICIO)
 ---> ALUMNO <---
+
+actua como experto programador web con conocimientos en html5, css, bootstrap v5.0, y siguiendo los estándares de w3c, usando en cada parte del código un 'section' en vez de un 'div', quiero que apartir del siguiente código html semántico que incluiré al final, sobreescribas el título principal por "TP04 - Ejercicio 03" y en el header cambies el título y que diga "Enfermería - Pago Semanal". Después, dentro del section crea un formulario responsive, con un padding de 1 em, que tenga como titulo "Registro enfermería" y, aplicando las clases de bootstrap v5.0, crea el primer label que diga "Horas trabajadas" y su respectivo input de tipo numerico con un min="0", el segundo label que diga "Turno" y su respectivo input de tipo select con 1 opciòn predeterminada que diga "Seleccione" y otras 2 opciones más: Mañana y Tarde. Luego, aún dentro del formulario, agrega un fieldset con un legend que diga "Día trabajados" y que tenga un input checkbox por cada día de la semana y al final añade un input de tipo submit que diga "Calcular" y el input debe estar centrado horizontalmente respecto del formulario. Agregar colores pastel a cada parte de la página que no tenga color aún. A continuación dejo el código para corregir y corregir con todas las indicaciones especificadas anteriormente:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
+
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 03</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
+
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ajustar padding para el formulario */
+        form {
+            padding: 1em;
+        }
+
+        /* Centrar el botón submit */
+        .btn-submit {
+            display: block;
+            margin: 1em auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Enfermería - Pago Semanal</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Registro enfermería</h2>
+            <form class="w-100">
+                <!-- Horas trabajadas -->
+                <div class="mb-3">
+                    <label for="horasTrabajadas" class="form-label">Horas trabajadas</label>
+                    <input type="number" class="form-control" id="horasTrabajadas" min="0">
+                </div>
+                
+                <!-- Turno -->
+                <div class="mb-3">
+                    <label for="turno" class="form-label">Turno</label>
+                    <select class="form-select" id="turno">
+                        <option selected>Seleccione</option>
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+                </div>
+                
+                <!-- Días trabajados -->
+                <fieldset class="mb-3">
+                    <legend>Días trabajados</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="lunes">
+                        <label class="form-check-label" for="lunes">Lunes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="martes">
+                        <label class="form-check-label" for="martes">Martes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="miercoles">
+                        <label class="form-check-label" for="miercoles">Miércoles</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="jueves">
+                        <label class="form-check-label" for="jueves">Jueves</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="viernes">
+                        <label class="form-check-label" for="viernes">Viernes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sabado">
+                        <label class="form-check-label" for="sabado">Sábado</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="domingo">
+                        <label class="form-check-label" for="domingo">Domingo</label>
+                    </div>
+                </fieldset>
+                
+                <!-- Botón Calcular -->
+                <button type="submit" class="btn btn-primary btn-submit">Calcular</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(FIN)
+
+---------------------------------------------------------------------------------------------------
+
+<<<< EJERCICIO 04 >>>>
+
+(INICIO)
+---> ALUMNO <---
