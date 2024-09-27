@@ -6,8 +6,9 @@
 
 <section id="respuesta-login">
     <?php
-        if ( !empty($_POST['correo'] && !empty($_POST['contra']) ) {
-            echo '<h3>Datos ingresados</h3>';
+        if ( !empty($_POST['correo']) && !empty($_POST['contra']) )
+        {
+            echo '<h2 class="text-center">Datos ingresados</h2><br>';
             echo '<p>Correo: <strong>'.$_POST['correo'].'</strong></p>';
             echo '<p>Contraseña: <strong>'.$_POST['contra'].'</strong></p>';
         }

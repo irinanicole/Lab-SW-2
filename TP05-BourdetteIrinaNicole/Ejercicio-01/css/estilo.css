@@ -1,0 +1,32 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0; 
+}
+
+body {
+    height: 100vh;
+    background-color: #fdfd96; /* color pastel para el body */
+}
+header {
+    background-color: #ffb3ba; /* color pastel para el header */
+}
+footer {
+    background-color: #bae1ff; /* color pastel para el footer */
+    height: 8vh;
+}
+main {
+    background-color: #c4e17f; /* color pastel para el main */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84vh; /* ajustando el main para que ocupe el resto de la pantalla */
+}
+form, #respuesta-login {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px; /* borde redondeado */
+    padding: 20px;
+    background-color: white; /* fondo blanco para destacar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* sombra ligera para darle efecto de elevación */
+}
