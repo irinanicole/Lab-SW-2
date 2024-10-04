@@ -25,48 +25,53 @@
         foreach ($_POST['dias'] as $dia)
         {
             $honorario = pagoDiario ($horas, $dia, $turno);
-            echo '<tr><td class="text-start">'.$dia.'</td><td class="w-25 text-end">'.number_format($honorario,2,',','.').'</td></tr>';
-            $pagoSemanal = $pagoSemanal + $honorario;
-        }
-        echo '<tr class="text-end"><td>Total</td><td>'.number_format($pagoSemanal,2,',','.').'</td></tr>';
-        echo '</tbody>';
-        echo '</table></section>';
+            $honorario2 = number_format($honorario,2,',','.');
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// TRABAJO DE ARCHIVOS //
+            // TRABAJO DE ARCHIVOS //
 
-        $dias = implode(';',$_POST['dias']);
+            $registro = $nombre.';'.$horas.';'.$turno.';'.$dia.';'.$honorario2;
 
-        $registro = $nombre.';'.$horas.';'.$turno.';'.$dias.';'.$pagoSemanal;
+            $registro = trim($registro);
 
-        $registro = trim($registro);
-
-        $carpeta = '../archivos/';
-        if (!file_exists($carpeta))
-        {
-            mkdir($carpeta);
-        }
-        $nombreArchivo = 'enfermeria_honorarios.txt';
-
-        $archivo = fopen($carpeta.$nombreArchivo,'a');
-
-       if ($archivo) // verifica que se haya abierto el archivo
-        {
-            $nuevaLinea = fputs($archivo,$registro.PHP_EOL);
-            if ($nuevaLinea)
+            $carpeta = '../archivos/';
+            if (!file_exists($carpeta))
             {
-                echo '<p class="text-center"><strong>Guardado exitoso</strong></p>';
-                fclose($archivo);
+                mkdir($carpeta);
+            }
+            $nombreArchivo = 'enfermeria_honorarios.txt';
+
+            $archivo = fopen($carpeta.$nombreArchivo,'a');
+
+        if ($archivo) // verifica que se haya abierto el archivo
+            {
+                $nuevaLinea = fputs($archivo,$registro.PHP_EOL);
+                if ($nuevaLinea)
+                {
+                    //echo '<p class="text-center"><strong>Guardado exitoso</strong></p>';
+                    fclose($archivo);
+                }
+                else
+                {
+                    echo '<p class="text-center"><strong>No se pudo guardar los datos</strong></p>';
+                }
             }
             else
             {
-                echo '<p class="text-center"><strong>No se pudo guardar los datos</strong></p>';
+                echo '<p>No se pudo abrir el archivo</p>';
             }
+
+            // FIN DEL TRABAJO DE ARCHIVO //
+
+            // contenido tabla: dias y honorarios
+            echo '<tr><td class="text-start">'.$dia.'</td><td class="w-25 text-end">'.$honorario2.'</td></tr>';
+            $pagoSemanal = $pagoSemanal + $honorario;
+            //
         }
-        else
-        {
-            echo '<p>No se pudo abrir el archivo</p>';
-        }
+        $pagoSemanal2 = number_format($pagoSemanal,2,',','.');
+        echo '<tr class="text-end"><td>Total</td><td>'.$pagoSemanal2.'</td></tr>';
+        echo '</tbody>';
+        echo '</table></section>';
+
     }
 ?>
 

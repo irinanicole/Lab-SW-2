@@ -1,0 +1,68 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body, main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #ffd1dc; /* Rosa pastel */
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+footer {
+    background-color: #c4e3f3; /* Azul pastel */
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.section-form {
+    padding: 2em;
+    width: 50%; /* Section con ancho 50% */
+    text-align: center;
+}
+
+/* Estilo para el formulario */
+form {
+    border: 1px solid #ccc; /* Borde sólido */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 2em;
+}
+
+.section-legajo, .section-nombre, .section-sueldo {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.section-legajo {
+    background-color: #ffebd6; /* Melocotón pastel */
+}
+
+.section-nombre {
+    background-color: #f9f7f3; /* Blanco pastel */
+}
+
+.section-sueldo {
+    background-color: #e2e8c0; /* Verde claro pastel */
+}
+
+@media (max-width: 768px) {
+    section {
+        margin-bottom: 1rem;
+    }
+}
