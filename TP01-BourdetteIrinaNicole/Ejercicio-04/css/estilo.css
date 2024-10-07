@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+header {
+    background-color: lightskyblue;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+main section {
+    background-color: lightcoral;
+    padding: 2.5%;
+    font-size: larger;
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+    padding: 0.5%;
+    background-color: lightgreen;
+}
