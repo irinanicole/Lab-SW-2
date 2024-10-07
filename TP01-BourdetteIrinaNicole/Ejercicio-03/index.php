@@ -7,7 +7,7 @@
 
 ?> 
 <!-- Termina codigo PHP para continuar en codigo html -->
-<table class="table table-success table-responsive caption-top table-bordered"> <!-- Codigo en HTML -->
+<table class="table table-success table-responsive caption-top table-bordered w-50"> <!-- Codigo en HTML -->
     <caption class="text-center"><h3>Estado de la Cuenta</h3></caption> 
     <thead>
         <tr> <!--FILA 0-->

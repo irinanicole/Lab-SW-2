@@ -11,6 +11,6 @@
     <header>
         <h1>Cuenta Bancaria</h1>
     </header>
-    <main class="flex flex-row justify-content-center">
-        <section class="col-6">
+    <main class="container my-3">
+        <section class="d-flex justify-content-center w-100">
 

@@ -1,0 +1,52 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfd96; /* Color pastel para el body */
+}
+
+header {
+    background-color: #ffb6c1; /* Color pastel para el header */
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #add8e6; /* Color pastel para el main */
+}
+
+form {
+    width: 100%;
+}
+
+.btn-simular {
+    display: flex;
+    justify-content: center;
+}
+
+.section-ganancias {
+    background-color: lightgreen;
+    width: 60%;
+    border-radius: 2em;
+}
+
+footer {
+    background-color: #d3ffce; /* Color pastel para el footer */
+    text-align: center;
+    padding: 10px;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

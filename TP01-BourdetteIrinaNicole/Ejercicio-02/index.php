@@ -36,7 +36,7 @@
     echo '/////////////////////////////////';
     $disponible = $penDrive - ($archivoA + $archivoB + $archivoC);
     $disponible2 = number_format($disponible, 2, ',', '.');
-    echo '<h2>Tamaño Disponible en PenDrtive: ', $disponible2,' GB</h2>';
+    echo '<h2>Tamaño Disponible en PenDrive: ', $disponible2,' GB</h2>';
 
     require_once('php/pie.php');
 ?>

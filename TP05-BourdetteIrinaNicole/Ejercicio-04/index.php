@@ -7,7 +7,7 @@
     <main class="container my-3 d-flex align-items-center">
         <section class="w-50 section-form">
             <!-- Formulario -->
-            <form action="php/consulta.php" method="get" class="needs-validation">
+            <form action="php/consulta.php" method="get">
                 <section class="mb-3">
                     <label for="legajo" class="form-label">Número de Legajo</label>
                     <input type="number" class="form-control" id="legajo" name="legajo" required>
