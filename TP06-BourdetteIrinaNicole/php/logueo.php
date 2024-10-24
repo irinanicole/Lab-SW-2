@@ -25,7 +25,16 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
         }
         else
         {
-            echo '<p>Usuario y/o Contraseña incorrectos</p>';
+            mysqli_stmt_bind_result ($sentencia, $usuTabla, $claveTabla);
+            if ($usu == $usuTabla)
+            {
+                echo '<p>Contraseña incorrecta</p>';
+            }
+            else
+            {
+                echo '<p>Usuario y/o Contraseña incorrectos</p>';
+            }
+
             header('refresh:3;url=../index.php');
         }
         
