@@ -21,7 +21,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 
         if ($q)
         {
-            header("refresh:0;url=articulo_listado.php");
+            header('refresh:0;url=articulo_listado.php?usu='.$usu);
         }
         else
         {

@@ -16,7 +16,7 @@
             $conexion = mysqli_connect($servidor, $usuario, $clave, $baseDatos);
         } catch (Exception $e) {
             $conexion = false;
-            echo '<p>Error. Comunìquese con su administrador.</p>';
+            echo '<p>Error. Comuníquese con su administrador.</p>';
         }
         
         return $conexion;
@@ -28,7 +28,7 @@
         {
             mysqli_close($conexion);
         } else {
-            echo '<p>No se puede desconectar porque no hay conexiòn abierta.</p>';
+            echo '<p>No se puede desconectar porque no hay conexión abierta.</p>';
         }
     }
 ?>
