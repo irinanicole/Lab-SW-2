@@ -1,0 +1,59 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #f8d7da; /* Color pastel para el header y footer */
+    text-align: center;
+    padding: 10px;
+}
+main {
+    background-color: #d1ecf1; /* Color pastel para el main */
+    min-height: 100vh; /* Para que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Distribución con espacio equitativo */
+    align-items: center;
+    width: 100%; /* Para que ocupe todo el ancho */
+}
+section {
+    background-color: #e2e3e5; /* Color pastel para las sections */
+    padding: 20px;
+    width: 100%;
+    max-width: 45%; /* Para que las secciones tengan el mismo ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Para alinear el contenido verticalmente */
+    align-items: center;
+    margin-bottom: 20px;
+}
+table {
+    margin-left: 10%; /* Margen a la izquierda y derecha del 10% */
+    margin-right: 10%;
+    width: 80%; /* Ajuste del ancho para la tabla */
+}
+h2 {
+    margin-bottom: 20px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Altura fija para centrar verticalmente el contenido */
+}
+/* ///////////////////////////////// */
+@media (min-width: 1024px) {
+    main {
+        flex-direction: row;
+    }
+    section {
+        height: 400px; /* Para que tengan la misma altura en pantallas grandes */
+    }
+}

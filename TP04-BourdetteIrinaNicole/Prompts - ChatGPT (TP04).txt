@@ -1,0 +1,1412 @@
+---------------------------------------------------------------------------------------------------
+<<<< EJERCICIO 01 Y 02 >>>>
+
+(INICIO)
+---> ALUMNO <---
+
+actua como experto programador web con conocimientos en html5, css, bootstrap v5.0, y siguiendo los estándares de w3c, usando en cada parte del código un 'section' en vez de un 'div', quiero que esribas un código html semántico, que tenga como título principal "TP04 - Ejercicio 01", que contenga un header con un título que diga "Nombre-Página", tenga un main y un section dentro del main, y al final de la página tenga un footer con un texto que diga "Copyright 2024 - Irina Nicole Bourdette". Ademas añadir la biblioteca de bootstrap como local con el directorio "../bootstrap-5.3.3-dist/css/bootstrap.min.css" para el css y "../bootstrap-5.3.3-dist/js/bootstrap.min.js" para el js. Agregar colores pastel a cada parte de la página para poder diferenciarla. Haz que el sitio sea responsive y centra absolutamente todo horizontalmente. 
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Centrado absoluto y estilo responsivo */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="w-100 text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section>
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-100">
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(1ER CAMBIO)
+---> ALUMNO <---
+
+haz que el width de todos los elementos de la página tengan un 100% según el tamaño de pantalla
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, main, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 100%; /* Asegura que section ocupe todo el ancho */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section>
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(2DO CAMBIO)
+---> ALUMNO <---
+
+Solo el main debe tener un w-75 y el section un w-50
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(3ER CAMBIO)
+---> ALUMNO <---
+
+agrega un color de fondo pastel al body que no se haya usado hasta ahora en todo el código
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
+
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(FIN)
+---------------------------------------------------------------------------------------------------
+
+<<<< EJERCICIO 03 >>>>
+
+(INICIO)
+---> ALUMNO <---
+
+actua como experto programador web con conocimientos en html5, css, bootstrap v5.0, y siguiendo los estándares de w3c, usando en cada parte del código un 'section' en vez de un 'div', quiero que apartir del siguiente código html semántico que incluiré al final, sobreescribas el título principal por "TP04 - Ejercicio 03" y en el header cambies el título y que diga "Enfermería - Pago Semanal". Después, dentro del section crea un formulario responsive, con un padding de 1 em, que tenga como titulo "Registro enfermería" y, aplicando las clases de bootstrap v5.0, crea el primer label que diga "Horas trabajadas" y su respectivo input de tipo numerico con un min="0", el segundo label que diga "Turno" y su respectivo input de tipo select con 1 opciòn predeterminada que diga "Seleccione" y otras 2 opciones más: Mañana y Tarde. Luego, aún dentro del formulario, agrega un fieldset con un legend que diga "Día trabajados" y que tenga un input checkbox por cada día de la semana y al final añade un input de tipo submit que diga "Calcular" y el input debe estar centrado horizontalmente respecto del formulario. Agregar colores pastel a cada parte de la página que no tenga color aún. A continuación dejo el código para corregir y corregir con todas las indicaciones especificadas anteriormente:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 01</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
+
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Nombre-Página</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Contenido del Main</h2>
+            <p>Aquí va el contenido de la sección principal del sitio.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 03</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
+
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ajustar padding para el formulario */
+        form {
+            padding: 1em;
+        }
+
+        /* Centrar el botón submit */
+        .btn-submit {
+            display: block;
+            margin: 1em auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Enfermería - Pago Semanal</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Registro enfermería</h2>
+            <form class="w-100">
+                <!-- Horas trabajadas -->
+                <div class="mb-3">
+                    <label for="horasTrabajadas" class="form-label">Horas trabajadas</label>
+                    <input type="number" class="form-control" id="horasTrabajadas" min="0">
+                </div>
+                
+                <!-- Turno -->
+                <div class="mb-3">
+                    <label for="turno" class="form-label">Turno</label>
+                    <select class="form-select" id="turno">
+                        <option selected>Seleccione</option>
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+                </div>
+                
+                <!-- Días trabajados -->
+                <fieldset class="mb-3">
+                    <legend>Días trabajados</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="lunes">
+                        <label class="form-check-label" for="lunes">Lunes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="martes">
+                        <label class="form-check-label" for="martes">Martes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="miercoles">
+                        <label class="form-check-label" for="miercoles">Miércoles</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="jueves">
+                        <label class="form-check-label" for="jueves">Jueves</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="viernes">
+                        <label class="form-check-label" for="viernes">Viernes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sabado">
+                        <label class="form-check-label" for="sabado">Sábado</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="domingo">
+                        <label class="form-check-label" for="domingo">Domingo</label>
+                    </div>
+                </fieldset>
+                
+                <!-- Botón Calcular -->
+                <button type="submit" class="btn btn-primary btn-submit">Calcular</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(1ER CAMBIO)
+---> ALUMNO <---
+
+agrega un name característico para cada uno de los input del formulario, excepto el input de tipo submit y cambio todos los 'div' dentro del formulario por un 'section'
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 03</title>
+    <!-- Enlace a Bootstrap local -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para los colores pastel */
+        body {
+            background-color: #e8d4f8; /* lila pastel */
+        }
+
+        header {
+            background-color: #f8c8dc; /* rosa pastel */
+        }
+
+        main {
+            background-color: #c8f8d2; /* verde pastel */
+        }
+
+        section {
+            background-color: #f8eec8; /* amarillo pastel */
+        }
+
+        footer {
+            background-color: #c8dff8; /* azul pastel */
+        }
+
+        /* Asegurar que todos los elementos, excepto main y section, tengan ancho 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
+        }
+
+        /* Centrado y estilo responsivo */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 75%; /* Main con ancho 75% */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2em;
+            width: 50%; /* Section con ancho 50% */
+            text-align: center;
+        }
+
+        footer {
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ajustar padding para el formulario */
+        form {
+            padding: 1em;
+        }
+
+        /* Centrar el botón submit */
+        .btn-submit {
+            display: block;
+            margin: 1em auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Enfermería - Pago Semanal</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="w-75">
+        <section class="w-50">
+            <h2>Registro enfermería</h2>
+            <form class="w-100">
+                <!-- Horas trabajadas -->
+                <section class="mb-3">
+                    <label for="horasTrabajadas" class="form-label">Horas trabajadas</label>
+                    <input type="number" class="form-control" id="horasTrabajadas" name="horas_trabajadas" min="0">
+                </section>
+                
+                <!-- Turno -->
+                <section class="mb-3">
+                    <label for="turno" class="form-label">Turno</label>
+                    <select class="form-select" id="turno" name="turno">
+                        <option selected>Seleccione</option>
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+                </section>
+                
+                <!-- Días trabajados -->
+                <fieldset class="mb-3">
+                    <legend>Días trabajados</legend>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="lunes" name="dia_lunes">
+                        <label class="form-check-label" for="lunes">Lunes</label>
+                    </section>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="martes" name="dia_martes">
+                        <label class="form-check-label" for="martes">Martes</label>
+                    </section>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="miercoles" name="dia_miercoles">
+                        <label class="form-check-label" for="miercoles">Miércoles</label>
+                    </section>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="jueves" name="dia_jueves">
+                        <label class="form-check-label" for="jueves">Jueves</label>
+                    </section>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="viernes" name="dia_viernes">
+                        <label class="form-check-label" for="viernes">Viernes</label>
+                    </section>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sabado" name="dia_sabado">
+                        <label class="form-check-label" for="sabado">Sábado</label>
+                    </section>
+                    <section class="form-check">
+                        <input class="form-check-input" type="checkbox" id="domingo" name="dia_domingo">
+                        <label class="form-check-label" for="domingo">Domingo</label>
+                    </section>
+                </fieldset>
+                
+                <!-- Botón Calcular -->
+                <button type="submit" class="btn btn-primary btn-submit">Calcular</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(FIN)
+
+---------------------------------------------------------------------------------------------------
+
+<<<< EJERCICIO 04 >>>>
+
+(INICIO)
+---> ALUMNO <---
+
+actua como experto programador web con conocimentos en html5, css, bootstrap v5.0, y siguiendo los estándares de w3c, quiero que escribas un codigo html semántico, usando siempre un 'section' en vez de un 'div', responsive, que tenga como título principal de la página "TP04 - Ejercicio 04", tenga un body que ocupe toda la pantalla y dentro del body que tenga un header con un h1 centralizado que diga "Inversiones", un main que ocupe 10 columnas de ancho y un footer con todo su contenido centralizado que diga "Copyright 2024 - Irina Nicole Bourdette". Dentro del main crear un formulario con título principal "Financiera" y con los siguientes campos: un label que diga "Depósito incial:" y su respectivo input de tipo numérico, y otro label que diga "Plazo" que encabezará un fieldset con 4 checkbox de tipo switch, donde el primer checkbox dirás "30 días", el segundo "45 días", el tercero "60 días" y el cuarto "90 días". Al final del formulario agregar un botón de tipo submit que se encuentre centralizado en el formulario, se llame "Simular" y tenga un ancho de 4 columnas.
+Además, tener en cuenta que tengo las extensiones de bootstrap instaladas en el computador, por lo que  se deberá usar el directorio "../bootstrap-5.3.3-dist/css/bootstrap.min.css" para linkear el css de bootstrap con el html de mi página y el dierctorio "../bootstrap-5.3.3-dist/js/bootstrap.min.js" para el js.
+Utilizar colores pastel para diferenciar las partes de la página.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 04</title>
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #fdfd96; /* Color pastel para el body */
+        }
+        header {
+            background-color: #ffb6c1; /* Color pastel para el header */
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #add8e6; /* Color pastel para el main */
+        }
+        footer {
+            background-color: #d3ffce; /* Color pastel para el footer */
+            text-align: center;
+            padding: 10px;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            width: 100%;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inversiones</h1>
+    </header>
+
+    <main class="container">
+        <section class="col-lg-10 col-md-12">
+            <h2 class="text-center">Financiera</h2>
+            <form class="p-3">
+                <div class="mb-3">
+                    <label for="deposito" class="form-label">Depósito inicial:</label>
+                    <input type="number" class="form-control" id="deposito" placeholder="Ingrese su depósito inicial">
+                </div>
+
+                <fieldset class="mb-3">
+                    <legend>Plazo:</legend>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo30">
+                        <label class="form-check-label" for="plazo30">30 días</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo45">
+                        <label class="form-check-label" for="plazo45">45 días</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo60">
+                        <label class="form-check-label" for="plazo60">60 días</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo90">
+                        <label class="form-check-label" for="plazo90">90 días</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary col-4">Simular</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(1ER CAMBIO)
+---> ALUMNO <---
+
+cambia todos los 'div 'que hay en lel código html por un 'section' en su lugar, y cambia el ancho del formulario a 6 columnas. También ubica el botón de Simular en el centro del formulario horizontalmente 
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 04</title>
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #fdfd96; /* Color pastel para el body */
+        }
+        header {
+            background-color: #ffb6c1; /* Color pastel para el header */
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #add8e6; /* Color pastel para el main */
+        }
+        footer {
+            background-color: #d3ffce; /* Color pastel para el footer */
+            text-align: center;
+            padding: 10px;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            width: 100%;
+        }
+        .btn-simular {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inversiones</h1>
+    </header>
+
+    <main class="container">
+        <section class="col-lg-6 col-md-12">
+            <h2 class="text-center">Financiera</h2>
+            <form class="p-3">
+                <section class="mb-3">
+                    <label for="deposito" class="form-label">Depósito inicial:</label>
+                    <input type="number" class="form-control" id="deposito" placeholder="Ingrese su depósito inicial">
+                </section>
+
+                <fieldset class="mb-3">
+                    <legend>Plazo:</legend>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo30">
+                        <label class="form-check-label" for="plazo30">30 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo45">
+                        <label class="form-check-label" for="plazo45">45 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo60">
+                        <label class="form-check-label" for="plazo60">60 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo90">
+                        <label class="form-check-label" for="plazo90">90 días</label>
+                    </section>
+                </fieldset>
+
+                <section class="btn-simular">
+                    <button type="submit" class="btn btn-primary col-4">Simular</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(2DO CAMBIO)
+---> ALUMNO <---
+
+agregarle un action="php/ganancias.php" y un method="post" al formulario, y también crear un 'name' característico para cada input.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 04</title>
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #fdfd96; /* Color pastel para el body */
+        }
+        header {
+            background-color: #ffb6c1; /* Color pastel para el header */
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #add8e6; /* Color pastel para el main */
+        }
+        footer {
+            background-color: #d3ffce; /* Color pastel para el footer */
+            text-align: center;
+            padding: 10px;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            width: 100%;
+        }
+        .btn-simular {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inversiones</h1>
+    </header>
+
+    <main class="container">
+        <section class="col-lg-6 col-md-12">
+            <h2 class="text-center">Financiera</h2>
+            <form action="php/ganancias.php" method="post" class="p-3">
+                <section class="mb-3">
+                    <label for="deposito" class="form-label">Depósito inicial:</label>
+                    <input type="number" class="form-control" id="deposito" name="deposito_inicial" placeholder="Ingrese su depósito inicial">
+                </section>
+
+                <fieldset class="mb-3">
+                    <legend>Plazo:</legend>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo30" name="plazo_30_dias">
+                        <label class="form-check-label" for="plazo30">30 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo45" name="plazo_45_dias">
+                        <label class="form-check-label" for="plazo45">45 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo60" name="plazo_60_dias">
+                        <label class="form-check-label" for="plazo60">60 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="plazo90" name="plazo_90_dias">
+                        <label class="form-check-label" for="plazo90">90 días</label>
+                    </section>
+                </fieldset>
+
+                <section class="btn-simular">
+                    <button type="submit" class="btn btn-primary col-4">Simular</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(3ER CAMBIO)
+---> ALUMNO <---
+
+cambia los input de tipo checkbox a tipo radio, pero manteniendo la funcion switch, y todos los name que estén relacionados a los checkbox cambiarlos a "plazo_dias" y modifica el ancho del boton Simular a solo 2 columnas
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 04</title>
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #fdfd96; /* Color pastel para el body */
+        }
+        header {
+            background-color: #ffb6c1; /* Color pastel para el header */
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #add8e6; /* Color pastel para el main */
+        }
+        footer {
+            background-color: #d3ffce; /* Color pastel para el footer */
+            text-align: center;
+            padding: 10px;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            width: 100%;
+        }
+        .btn-simular {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inversiones</h1>
+    </header>
+
+    <main class="container">
+        <section class="col-lg-6 col-md-12">
+            <h2 class="text-center">Financiera</h2>
+            <form action="php/ganancias.php" method="post" class="p-3">
+                <section class="mb-3">
+                    <label for="deposito" class="form-label">Depósito inicial:</label>
+                    <input type="number" class="form-control" id="deposito" name="deposito_inicial" placeholder="Ingrese su depósito inicial">
+                </section>
+
+                <fieldset class="mb-3">
+                    <legend>Plazo:</legend>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="plazo30" name="plazo_dias" value="30">
+                        <label class="form-check-label" for="plazo30">30 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="plazo45" name="plazo_dias" value="45">
+                        <label class="form-check-label" for="plazo45">45 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="plazo60" name="plazo_dias" value="60">
+                        <label class="form-check-label" for="plazo60">60 días</label>
+                    </section>
+                    <section class="form-check form-switch">
+                        <input class="form-check-input" type="radio" id="plazo90" name="plazo_dias" value="90">
+                        <label class="form-check-label" for="plazo90">90 días</label>
+                    </section>
+                </fieldset>
+
+                <section class="btn-simular">
+                    <button type="submit" class="btn btn-primary col-2">Simular</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(FIN)
+
+---------------------------------------------------------------------------------------------------
+
+<<<< EJERCICIO 05 >>>>
+
+(INICIO)
+---> ALUMNO <---
+
+actua como experto programador web con conocimientos en html5,css y bootstrap v5.0, y siguiendo los estándares de w3c, usando 'section' en lugar de 'div' todo el tiempo, quiero que crees un código html semántico de título principal "TP04 - Ejercicio 05", tenga un body que ocupe todo el ancho y alto de la pantalla, y dentro tenga un header que ocupe que tenga w-100 con un h1 que diga "Inicio de Sesión" que se encunetre en el centro del header. Luego, crear un main que ocupe todo el ancho del body y tenga su contenido centralizado horizontal y verticalmente. Dentro del main crear un formulario responsive horizontal con los campos "Email" y "Contraseña" y sus input de tipo email y password respectivamente. Y antes de terminar del formulario agregar un input de tipo submit. Por último, añadir un footer al final del body que diga "Copyright 2024 - Irina Nicole Bourdette" y se encuentre centralizado horizontal y verticalmente dentro del footer. Usar colores pastel para diferenciar las diferentes partes de la página. Utilizar el directorio "../bootstrap-5.3.3-dist/css/bootstrap.min.css" para usar las clases de bootstrap v5.0 del css y el directorio "../bootstrap-5.3.3-dist/js/bootstrap.min.js" para el js. Hacer el sitio responsive.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 05</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            height: 100vh;
+            background-color: #fdfd96; /* color pastel para el body */
+        }
+        header {
+            background-color: #ffb3ba; /* color pastel para el header */
+        }
+        footer {
+            background-color: #bae1ff; /* color pastel para el footer */
+            height: 8vh;
+        }
+        main {
+            background-color: #c4e17f; /* color pastel para el main */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 84vh; /* ajustando el main para que ocupe el resto de la pantalla */
+        }
+        form {
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header class="w-100 text-center py-4">
+        <h1>Inicio de Sesión</h1>
+    </header>
+    
+    <main>
+        <section>
+            <form class="row g-3 needs-validation" novalidate>
+                <section class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un email válido.
+                    </div>
+                </section>
+                <section class="col-md-12">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                    <div class="invalid-feedback">
+                        Por favor, introduce una contraseña.
+                    </div>
+                </section>
+                <section class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                </section>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="w-100 text-center d-flex justify-content-center align-items-center">
+        <p class="mb-0">Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(1ER CAMBIO)
+
+---> ALUMNO <---
+
+darle un borde redondeado al formulario. También, el botón de Iniciar Sesión debe tener un ancho de 4 columnas.
+
+---> CHAT-GPT <---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP04 - Ejercicio 05</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            height: 100vh;
+            background-color: #fdfd96; /* color pastel para el body */
+        }
+        header {
+            background-color: #ffb3ba; /* color pastel para el header */
+        }
+        footer {
+            background-color: #bae1ff; /* color pastel para el footer */
+            height: 8vh;
+        }
+        main {
+            background-color: #c4e17f; /* color pastel para el main */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 84vh; /* ajustando el main para que ocupe el resto de la pantalla */
+        }
+        form {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px; /* borde redondeado */
+            padding: 20px;
+            background-color: white; /* fondo blanco para destacar */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* sombra ligera para darle efecto de elevación */
+        }
+    </style>
+</head>
+<body>
+    <header class="w-100 text-center py-4">
+        <h1>Inicio de Sesión</h1>
+    </header>
+    
+    <main>
+        <section>
+            <form class="row g-3 needs-validation" novalidate>
+                <section class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+                    <div class="invalid-feedback">
+                        Por favor, introduce un email válido.
+                    </div>
+                </section>
+                <section class="col-md-12">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                    <div class="invalid-feedback">
+                        Por favor, introduce una contraseña.
+                    </div>
+                </section>
+                <section class="col-12 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary col-4">Iniciar Sesión</button>
+                </section>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="w-100 text-center d-flex justify-content-center align-items-center">
+        <p class="mb-0">Copyright 2024 - Irina Nicole Bourdette</p>
+    </footer>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+(FIN)
+---------------------------------------------------------------------------------------------------
